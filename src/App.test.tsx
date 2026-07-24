@@ -33,7 +33,6 @@ describe('portfolio routes', () => {
     ).toBeVisible()
     const sectionIds = [
       'welcome-to-flare',
-      'community-screen',
       'approachable-interface',
       'safety-interface',
       'food-scanner',

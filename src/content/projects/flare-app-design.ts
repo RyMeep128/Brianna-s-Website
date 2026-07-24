@@ -18,29 +18,18 @@ export const flareAppDesign: Project = {
   sections: [
     {
       id: 'welcome-to-flare',
-      type: 'text',
-      eyebrow: 'Welcome to Flare!',
-      heading: 'Support designed around the whole experience.',
-      body: [
-        'The name refers both to autoimmune flare-ups and to emergency flares, representing guidance and support during difficult moments.',
-        'The app provides resources for a variety of autoimmune conditions, helping users feel recognized rather than overlooked. These resources address the physical, mental, and social challenges associated with chronic illness.',
-      ],
-      width: 'narrow',
-      spacingBefore: 'xlarge',
-      spacingAfter: 'large',
-      background: 'accent',
-    },
-    {
-      id: 'community-screen',
       type: 'splitMediaText',
       media: {
         src: '/assets/projects/flare-app-design/connectonflare3.avif',
         alt: 'Flare app community interface shown on a mobile phone',
         aspectRatio: 'wide',
       },
-      heading: 'Connection without isolation',
+      heading: 'Welcome to Flare!',
       body: [
-        'Private community spaces allow people to form connections, share experiences, and support one another. A built-in journal helps users record symptoms, potential triggers, treatments, and changes over time.',
+        'Flare is an app designed to help people living with autoimmune conditions find reliable resources, track their health, and connect with others who understand their experiences. The name refers both to autoimmune flare-ups and to emergency flares, representing guidance and support during difficult moments.',
+        'The app would provide resources for a variety of autoimmune conditions, helping users feel recognized rather than overlooked. These resources would include articles about managing the physical, mental, and social challenges associated with chronic illness.',
+        'Flare would also offer private community spaces available exclusively to app users, allowing people to form connections, share experiences, and support one another. A built-in journal would help users record symptoms, potential triggers, treatments, and changes over time.',
+        'Finally, the app would include a customizable AI-powered food scanner. Users could configure the scanner around their specific allergies, dietary restrictions, and known trigger foods. By scanning ingredient lists or food labels, the app could identify potential concerns and help users make more informed decisions.',
       ],
       mediaPosition: 'left',
       ratio: '1:1',
@@ -55,7 +44,7 @@ export const flareAppDesign: Project = {
       media: {
         src: '/assets/projects/flare-app-design/SlideshowFlare9.avif',
         alt: 'Flare interface demonstrating an approachable, easy-to-navigate experience',
-        caption: 'Approachable and easy to navigate.',
+        caption: 'We are approachable and have an Easy to Navigate UI',
         aspectRatio: 'wide',
       },
       width: 'full',
@@ -68,7 +57,7 @@ export const flareAppDesign: Project = {
       media: {
         src: '/assets/projects/flare-app-design/SlideshowFlare11.avif',
         alt: 'Flare interface presenting safety and support features',
-        caption: 'Safety is treated seriously.',
+        caption: 'we take Safety Seriously.',
         aspectRatio: 'wide',
       },
       width: 'full',
@@ -79,10 +68,9 @@ export const flareAppDesign: Project = {
     {
       id: 'food-scanner',
       type: 'text',
-      eyebrow: 'Practical support',
-      heading: 'A scanner tailored to the individual.',
+      heading: 'We use color, gradients, and texture...',
       body: [
-        'Color, gradients, and texture help communicate the complex emotions associated with autoimmune conditions. A customizable AI-powered food scanner can be configured around specific allergies, dietary restrictions, and known trigger foods.',
+        'to show complicated emotions associated with Autoimmune Conditions.',
       ],
       width: 'narrow',
       spacingBefore: 'xlarge',
