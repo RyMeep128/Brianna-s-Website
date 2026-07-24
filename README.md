@@ -42,6 +42,6 @@ npm run build
 - `src/types/project.ts` — layout recipe contract
 - `public/assets/projects` — project artwork, grouped by slug
 
-`Flare App Design` currently uses intentionally blank media slots. Add
-Brianna's real files under `public/assets/projects/flare-app-design/` and
-reference those file names in its project definition when they are ready.
+`Flare App Design` uses Brianna's supplied project artwork from
+`public/assets/projects/flare-app-design/`. Shared identity assets live under
+`public/assets/branding/`.

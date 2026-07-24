@@ -25,11 +25,9 @@ export function PortfolioIndexPage() {
           </LinkButton>
         </div>
         <Media
-          media={{
-            alt: 'Flare App Design cover artwork to be added',
-            placeholder: 'orange',
-            aspectRatio: 'landscape',
-          }}
+          media={featuredProject.cover}
+          fit="cover"
+          loading="eager"
         />
       </section>
       <section className="welcome-panel" id="about">

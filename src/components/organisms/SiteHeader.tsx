@@ -4,8 +4,10 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="wordmark" to="/" aria-label="Brianna, home">
-        <span>Brianna</span>
-        <em>Janean</em>
+        <img
+          src="/assets/branding/temp_briannaLogo.png"
+          alt="Brianna Janean"
+        />
       </Link>
       <nav aria-label="Primary navigation">
         <NavLink to="/" end>Home</NavLink>

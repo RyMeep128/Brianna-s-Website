@@ -28,14 +28,14 @@ describe('portfolio routes', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /we are flare/i,
+        name: /flare app design/i,
       }),
     ).toBeVisible()
     const sectionIds = [
       'welcome-to-flare',
       'community-screen',
-      'interface-details',
-      'visual-language',
+      'approachable-interface',
+      'safety-interface',
       'food-scanner',
     ]
     const renderedIds = Array.from(
