@@ -169,19 +169,22 @@
   }
 
   .latest-work > .latest-work__media {
+    position: relative;
     width: 647px;
     height: 382px;
     min-height: 0;
     margin: 26px 0 0;
     overflow: hidden;
     aspect-ratio: auto;
-    background: linear-gradient(155deg, #f49a3d 0%, #f15a24 72%);
+    background: linear-gradient(135deg, #f7a13a 0%, #f4511e 100%);
   }
 
   .latest-work > .latest-work__media .media {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(1) brightness(0.51) contrast(100);
+    mix-blend-mode: screen;
   }
 
   .welcome-panel {
@@ -341,18 +344,21 @@
   }
 
   .latest-work > .latest-work__media {
+    position: relative;
     width: 100%;
     height: auto;
     min-height: 0;
     margin: 0;
     overflow: hidden;
     aspect-ratio: 1200 / 698;
-    background: linear-gradient(155deg, #f49a3d 0%, #f15a24 72%);
+    background: linear-gradient(135deg, #f7a13a 0%, #f4511e 100%);
   }
 
   .latest-work > .latest-work__media .media {
     width: 100%;
     height: 100%;
+    filter: grayscale(1) brightness(0.51) contrast(100);
+    mix-blend-mode: screen;
   }
 
   .welcome-panel {
@@ -407,13 +413,7 @@
   width: 100%;
   max-width: none;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    #f7a13a 0%,
-    #f78b2f 38%,
-    #f66b25 70%,
-    #f4511e 100%
-  );
+  background: linear-gradient(135deg, #f7a13a 0%, #f4511e 100%);
   border: 0;
 }
 
@@ -424,6 +424,7 @@
 
 .project-introduction[data-project-slug='flare-app-design']
   .project-introduction__hero {
+  position: relative;
   width: 100%;
   overflow: hidden;
   background: inherit;
@@ -436,7 +437,8 @@
   width: 100%;
   height: auto;
   object-fit: contain !important;
-  mix-blend-mode: lighten;
+  filter: grayscale(1) brightness(0.51) contrast(100);
+  mix-blend-mode: screen;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
