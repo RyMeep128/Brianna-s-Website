@@ -19,6 +19,10 @@ describe('portfolio routes', () => {
     expect(
       screen.getByRole('link', { name: 'View Flare App Design' }),
     ).toHaveAttribute('href', '/projects/flare-app-design')
+    expect(screen.getByRole('link', { name: 'Read More' })).toHaveAttribute(
+      'href',
+      '/about',
+    )
   })
 
   it('renders project sections in their declared order', () => {
@@ -45,6 +49,10 @@ describe('portfolio routes', () => {
     ).map((element) => element.getAttribute('data-section-id'))
 
     expect(renderedIds).toEqual(sectionIds)
+    expect(screen.getByRole('link', { name: 'All projects' })).toHaveAttribute(
+      'href',
+      '/projects',
+    )
   })
 
   it('renders a not-found page for an unknown project', () => {

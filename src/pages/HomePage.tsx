@@ -45,7 +45,7 @@ export function HomePage() {
             my work, you&apos;ll see the dedication and creativity I pour into
             each project.
           </p>
-          <a href="#footer">Read More</a>
+          <Link to="/about">Read More</Link>
         </div>
       </section>
     </main>
