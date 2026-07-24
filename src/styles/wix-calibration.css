@@ -409,11 +409,53 @@
 }
 
 /* Flare follows Brianna's Wix art direction while remaining fluid. */
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-shell--flare {
+  color: #fff;
+  background: linear-gradient(180deg, #f7a13a 0%, #f4511e 100%);
+}
+
+.site-shell--flare .site-header,
+.site-shell--flare main,
+.site-shell--flare .site-footer,
+.site-shell--flare .project-introduction,
+.site-shell--flare .project-sections,
+.site-shell--flare .project-section,
+.site-shell--flare .project-navigation {
+  background: transparent;
+}
+
+.site-shell--flare .site-footer {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.site-shell--flare .wordmark,
+.site-shell--flare .wordmark img {
+  mix-blend-mode: multiply;
+}
+
+.site-shell--flare .project-sections .labeled-media,
+.site-shell--flare .project-sections .media {
+  background: transparent;
+}
+
+.site-shell--flare .project-sections .media {
+  mix-blend-mode: multiply;
+}
+
+.site-shell--flare .project-navigation a {
+  color: #fff;
+}
+
 .project-introduction[data-project-slug='flare-app-design'] {
   width: 100%;
   max-width: none;
   overflow: hidden;
-  background: linear-gradient(135deg, #f7a13a 0%, #f4511e 100%);
+  background: transparent;
   border: 0;
 }
 
@@ -426,19 +468,69 @@
   .project-introduction__hero {
   position: relative;
   width: 100%;
+  min-height: clamp(420px, 50vw, 720px);
   overflow: hidden;
-  background: inherit;
+  background: transparent;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
   .project-introduction__hero
   .media {
   display: block;
-  width: 100%;
-  height: auto;
+  position: absolute;
+  top: 21%;
+  left: 15%;
+  z-index: 1;
+  width: 68%;
+  height: 68%;
   object-fit: contain !important;
   filter: grayscale(1) brightness(0.51) contrast(100);
   mix-blend-mode: screen;
+}
+
+.flare-hero__type {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  color: #fff;
+  pointer-events: none;
+}
+
+.flare-hero__type span {
+  position: absolute;
+  display: block;
+}
+
+.flare-hero__hello {
+  top: 5%;
+  left: 18%;
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: clamp(54px, 8vw, 116px);
+  font-weight: 700;
+  line-height: 1;
+  transform: rotate(-4deg);
+}
+
+.flare-hero__we-are {
+  top: 29%;
+  left: 16%;
+  font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
+  font-size: clamp(35px, 5vw, 76px);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.flare-hero__community {
+  right: 8%;
+  bottom: 5%;
+  left: 8%;
+  font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
+  font-size: clamp(14px, 2vw, 31px);
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
@@ -495,8 +587,8 @@
   margin: 0;
   padding: 0;
   gap: 0;
-  color: #333;
-  background: #fff;
+  color: #fff;
+  background: transparent;
 }
 
 .project-sections [data-section-id='welcome-to-flare'] .labeled-media {
@@ -531,6 +623,7 @@
   font-family: helvetica-w01-roman, sans-serif;
   font-size: 14px;
   line-height: 1.4;
+  color: #fff;
 }
 
 .project-sections [data-section-id='approachable-interface'],
@@ -540,8 +633,8 @@
   max-width: none;
   margin: 0;
   padding: 62px 5.7% 0;
-  color: #333;
-  background: #fff;
+  color: #fff;
+  background: transparent;
 }
 
 .project-sections [data-section-id='approachable-interface'] .media,
@@ -559,7 +652,7 @@
   right: 6%;
   left: 6%;
   margin: 0;
-  color: #333;
+  color: #fff;
   font-family: helvetica-w01-bold, sans-serif;
   font-size: 38px;
   line-height: 1.4;
@@ -648,7 +741,7 @@
   padding: 50px 4.5% 34px;
   overflow: hidden;
   color: #fff;
-  background: #f3a23e;
+  background: transparent;
   text-align: center;
 }
 
@@ -709,6 +802,36 @@
 }
 
 @media (max-width: 700px) {
+  .project-introduction[data-project-slug='flare-app-design']
+    .project-introduction__hero {
+    min-height: 390px;
+  }
+
+  .project-introduction[data-project-slug='flare-app-design']
+    .project-introduction__hero
+    .media {
+    top: 25%;
+    left: 4%;
+    width: 92%;
+    height: 62%;
+  }
+
+  .flare-hero__hello {
+    top: 7%;
+    left: 8%;
+  }
+
+  .flare-hero__we-are {
+    top: 27%;
+    left: 8%;
+  }
+
+  .flare-hero__community {
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+  }
+
   .project-sections [data-section-id='welcome-to-flare'] {
     grid-template-columns: 1fr;
     min-height: 0;
