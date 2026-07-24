@@ -733,6 +733,8 @@
 }
 
 .project-sections [data-section-id='food-scanner'] {
+  --palette-center: 53.5%;
+  --palette-circle-size: min(16vw, 320px);
   position: relative;
   width: 100%;
   max-width: none;
@@ -787,18 +789,45 @@
 }
 
 .project-sections [data-section-id='food-scanner']::after {
-  top: 25%;
+  top: calc(var(--palette-center) - var(--palette-circle-size) / 2);
   right: auto;
-  left: 5.5%;
-  width: min(16vw, 320px);
-  height: min(16vw, 320px);
+  left: 2%;
+  width: var(--palette-circle-size);
+  height: var(--palette-circle-size);
   background: #f5a63d;
   border-radius: 50%;
   box-shadow:
-    19.5vw 0 #f45120,
-    39vw 0 #9dbdca,
-    58.5vw 0 #c7c3d8,
-    78vw 0 #303d7d;
+    20vw 0 #f45120,
+    40vw 0 #9dbdca,
+    60vw 0 #c7c3d8,
+    80vw 0 #303d7d;
+  animation: palette-drift 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes palette-drift {
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+
+  25% {
+    transform: translateX(-0.7vw) scale(0.985, 1.015);
+  }
+
+  50% {
+    transform: translateX(0.5vw) scale(1.015, 0.985);
+  }
+
+  75% {
+    transform: translateX(-0.25vw) scale(0.995, 1.005);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-sections [data-section-id='food-scanner']::after {
+    animation: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -873,6 +902,8 @@
   }
 
   .project-sections [data-section-id='food-scanner'] {
+    --palette-center: 52.5%;
+    --palette-circle-size: 16vw;
     min-height: 390px;
     padding: 30px 18px 26px;
   }
@@ -897,14 +928,14 @@
   }
 
   .project-sections [data-section-id='food-scanner']::after {
-    top: 34%;
-    left: 4%;
-    width: 16vw;
-    height: 16vw;
+    top: calc(var(--palette-center) - var(--palette-circle-size) / 2);
+    left: 2%;
+    width: var(--palette-circle-size);
+    height: var(--palette-circle-size);
     box-shadow:
-      19.8vw 0 #f45120,
-      39.6vw 0 #9dbdca,
-      59.4vw 0 #c7c3d8,
-      79.2vw 0 #303d7d;
+      20vw 0 #f45120,
+      40vw 0 #9dbdca,
+      60vw 0 #c7c3d8,
+      80vw 0 #303d7d;
   }
 }
