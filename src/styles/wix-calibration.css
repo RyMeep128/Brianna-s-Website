@@ -433,9 +433,13 @@
   border-color: rgba(255, 255, 255, 0.45);
 }
 
-.site-shell--flare .wordmark,
+.site-shell--flare .wordmark {
+  mix-blend-mode: screen;
+}
+
 .site-shell--flare .wordmark img {
-  mix-blend-mode: multiply;
+  filter: grayscale(1) invert(1) contrast(100);
+  mix-blend-mode: screen;
 }
 
 .site-shell--flare .project-sections .labeled-media,
@@ -474,11 +478,11 @@
   .media {
   display: block;
   position: absolute;
-  top: 21%;
+  top: 8%;
   left: 15%;
   z-index: 1;
   width: 68%;
-  height: 68%;
+  height: 78%;
   object-fit: contain !important;
   filter: grayscale(1) brightness(0.51) contrast(100);
   mix-blend-mode: screen;
@@ -508,7 +512,7 @@
 }
 
 .flare-hero__we-are {
-  top: 29%;
+  top: 21%;
   left: 16%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(35px, 5vw, 76px);
@@ -519,7 +523,7 @@
 
 .flare-hero__community {
   right: 8%;
-  bottom: 5%;
+  bottom: 22%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(14px, 2vw, 31px);
@@ -806,10 +810,10 @@
   .project-introduction[data-project-slug='flare-app-design']
     .project-introduction__hero
     .media {
-    top: 25%;
+    top: 8%;
     left: 4%;
     width: 92%;
-    height: 62%;
+    height: 78%;
   }
 
   .flare-hero__hello {
@@ -818,13 +822,13 @@
   }
 
   .flare-hero__we-are {
-    top: 27%;
+    top: 22%;
     left: 8%;
   }
 
   .flare-hero__community {
     right: 5%;
-    bottom: 5%;
+    bottom: 18%;
     left: 5%;
   }
 
