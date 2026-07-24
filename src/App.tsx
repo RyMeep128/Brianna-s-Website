@@ -4,6 +4,7 @@ import { SiteFooter } from './components/organisms/SiteFooter'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PortfolioIndexPage } from './pages/PortfolioIndexPage'
 import { ProjectPage } from './pages/ProjectPage'
+import { AboutPage, ProjectsPage } from './pages/BlankPage'
 
 export function App() {
   const { pathname } = useLocation()
@@ -19,6 +20,8 @@ export function App() {
       <SiteHeader />
       <Routes>
         <Route path="/" element={<PortfolioIndexPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

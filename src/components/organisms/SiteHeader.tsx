@@ -12,12 +12,8 @@ export function SiteHeader() {
       <nav aria-label="Primary navigation">
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/projects/flare-app-design">Flare App Design</NavLink>
-        <span className="nav-preview" title="Project assets coming later">
-          Wild Thing Rebrand
-        </span>
-        <span className="nav-preview" title="More projects coming later">
-          More
-        </span>
+        <NavLink to="/about">About Me</NavLink>
+        <NavLink to="/projects" end>Projects</NavLink>
       </nav>
     </header>
   )

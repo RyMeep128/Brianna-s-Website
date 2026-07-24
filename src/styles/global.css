@@ -613,6 +613,10 @@ img {
   text-align: center;
 }
 
+.blank-page {
+  min-height: clamp(22rem, 52vh, 42rem);
+}
+
 .not-found .text--display {
   margin-bottom: var(--space-5);
 }

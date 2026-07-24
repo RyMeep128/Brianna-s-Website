@@ -53,4 +53,32 @@ describe('portfolio routes', () => {
 
     expect(screen.getByRole('heading', { name: /isn’t part/i })).toBeVisible()
   })
+
+  it.each([
+    ['/about', 'About me'],
+    ['/projects', 'Projects'],
+  ])('renders the blank %s page with shared navigation', (path, label) => {
+    render(
+      <MemoryRouter initialEntries={[path]}>
+        <App />
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByRole('main', { name: label })).toBeVisible()
+    expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute(
+      'href',
+      '/',
+    )
+    expect(
+      screen.getByRole('link', { name: 'Flare App Design' }),
+    ).toHaveAttribute('href', '/projects/flare-app-design')
+    expect(screen.getByRole('link', { name: 'About Me' })).toHaveAttribute(
+      'href',
+      '/about',
+    )
+    expect(screen.getByRole('link', { name: 'Projects' })).toHaveAttribute(
+      'href',
+      '/projects',
+    )
+  })
 })
