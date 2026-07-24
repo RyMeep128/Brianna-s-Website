@@ -479,7 +479,7 @@
   .project-introduction__hero {
   position: relative;
   width: 100%;
-  min-height: clamp(340px, 44vw, 520px);
+  min-height: clamp(320px, 40vw, 475px);
   overflow: hidden;
   background: transparent;
 }
@@ -534,7 +534,7 @@
 
 .flare-hero__community {
   right: 8%;
-  bottom: 9%;
+  bottom: 13%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(11px, 1.35vw, 20px);
@@ -547,6 +547,10 @@
 .project-introduction[data-project-slug='flare-app-design']
   .project-introduction__details {
   display: none;
+}
+
+.site-shell--flare .project-sections {
+  margin-top: -32px;
 }
 
 @keyframes flare-hop {
@@ -878,7 +882,7 @@
 @media (max-width: 700px) {
   .project-introduction[data-project-slug='flare-app-design']
     .project-introduction__hero {
-    min-height: 330px;
+    min-height: 300px;
   }
 
   .project-introduction[data-project-slug='flare-app-design']
@@ -902,8 +906,12 @@
 
   .flare-hero__community {
     right: 5%;
-    bottom: 8%;
+    bottom: 13%;
     left: 5%;
+  }
+
+  .site-shell--flare .project-sections {
+    margin-top: -18px;
   }
 
   .project-sections [data-section-id='welcome-to-flare'] {
