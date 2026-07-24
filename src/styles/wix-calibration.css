@@ -479,9 +479,9 @@
   display: block;
   position: absolute;
   top: 8%;
-  left: 15%;
+  left: 27%;
   z-index: 1;
-  width: 68%;
+  width: 46%;
   height: 78%;
   object-fit: contain !important;
   filter: grayscale(1) brightness(0.51) contrast(100);
@@ -502,20 +502,20 @@
 }
 
 .flare-hero__hello {
-  top: 5%;
-  left: 18%;
+  top: 10%;
+  left: 34%;
   font-family: 'Segoe Script', 'Brush Script MT', cursive;
-  font-size: clamp(54px, 8vw, 116px);
+  font-size: clamp(44px, 5vw, 84px);
   font-weight: 700;
   line-height: 1;
   transform: rotate(-4deg);
 }
 
 .flare-hero__we-are {
-  top: 21%;
-  left: 16%;
+  top: 28%;
+  left: 32%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
-  font-size: clamp(35px, 5vw, 76px);
+  font-size: clamp(28px, 3vw, 52px);
   line-height: 1;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -526,7 +526,7 @@
   bottom: 22%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
-  font-size: clamp(14px, 2vw, 31px);
+  font-size: clamp(11px, 1.35vw, 20px);
   line-height: 1.25;
   letter-spacing: 0.14em;
   text-align: center;
