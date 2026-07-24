@@ -2,7 +2,7 @@ import { LinkButton } from '../components/atoms/LinkButton'
 import { Media } from '../components/atoms/Media'
 import { projects } from '../content/projects'
 
-export function PortfolioIndexPage() {
+export function HomePage() {
   const featuredProject = projects[0]
 
   return (

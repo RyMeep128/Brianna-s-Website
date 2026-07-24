@@ -61,8 +61,7 @@
     overflow: hidden;
   }
 
-  .site-header nav a,
-  .site-header .nav-preview {
+  .site-header nav a {
     display: grid;
     height: 50px;
     padding: 0;
@@ -437,8 +436,7 @@
   mix-blend-mode: screen;
 }
 
-.site-shell--flare .site-header nav a,
-.site-shell--flare .site-header .nav-preview {
+.site-shell--flare .site-header nav a {
   color: #fff;
 }
 

@@ -6,7 +6,7 @@ import { ProjectSections } from '../components/organisms/ProjectSections'
 import { getNextProject, getProjectBySlug } from '../content/projects'
 import { NotFoundPage } from './NotFoundPage'
 
-export function ProjectPage() {
+export function ProjectDetailPage() {
   const { slug = '' } = useParams()
   const project = getProjectBySlug(slug)
 
