@@ -168,13 +168,19 @@
     display: none;
   }
 
-  .latest-work > .media {
+  .latest-work > .latest-work__media {
     width: 647px;
     height: 382px;
     min-height: 0;
     margin: 26px 0 0;
+    overflow: hidden;
     aspect-ratio: auto;
     background: linear-gradient(155deg, #f49a3d 0%, #f15a24 72%);
+  }
+
+  .latest-work > .latest-work__media .media {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -334,13 +340,19 @@
     margin-top: 30px;
   }
 
-  .latest-work > .media {
+  .latest-work > .latest-work__media {
     width: 100%;
     height: auto;
     min-height: 0;
     margin: 0;
+    overflow: hidden;
     aspect-ratio: 1200 / 698;
     background: linear-gradient(155deg, #f49a3d 0%, #f15a24 72%);
+  }
+
+  .latest-work > .latest-work__media .media {
+    width: 100%;
+    height: 100%;
   }
 
   .welcome-panel {
@@ -425,8 +437,6 @@
   height: auto;
   object-fit: contain !important;
   mix-blend-mode: lighten;
-  transform-origin: 50% 100%;
-  animation: flare-hop 4.6s cubic-bezier(0.22, 0.78, 0.34, 1) infinite;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
@@ -462,10 +472,13 @@
   }
 }
 
+.latest-work__media .media {
+  transform-origin: 50% 100%;
+  animation: flare-hop 4.6s cubic-bezier(0.22, 0.78, 0.34, 1) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .project-introduction[data-project-slug='flare-app-design']
-    .project-introduction__hero
-    .media {
+  .latest-work__media .media {
     animation: none;
   }
 }
@@ -473,7 +486,7 @@
 .project-sections [data-section-id='welcome-to-flare'] {
   position: relative;
   display: grid;
-  grid-template-columns: 38% 62%;
+  grid-template-columns: minmax(300px, 38%) minmax(0, 62%);
   width: 100%;
   max-width: none;
   min-height: 596px;
@@ -494,7 +507,7 @@
   height: 100%;
   min-height: 596px;
   object-fit: cover !important;
-  object-position: left center;
+  object-position: 12% center;
 }
 
 .project-sections [data-section-id='welcome-to-flare'] .prose {
@@ -556,51 +569,141 @@
 }
 
 @media (min-width: 980px) {
+  .project-sections [data-section-id='welcome-to-flare'] {
+    position: relative;
+    display: block;
+    height: 680px;
+  }
+
+  .project-sections [data-section-id='welcome-to-flare'] .labeled-media {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 778px);
+    width: 1121px;
+    height: 596px;
+  }
+
+  .project-sections [data-section-id='welcome-to-flare'] .media {
+    width: 1121px;
+    height: 596px;
+    object-fit: contain !important;
+  }
+
+  .project-sections [data-section-id='welcome-to-flare'] .prose {
+    position: absolute;
+    top: 104px;
+    left: calc(50% - 111px);
+    width: 535px;
+    max-width: 535px;
+    padding: 0;
+  }
+
   .project-sections [data-section-id='approachable-interface'] {
-    padding-right: max(5.7%, calc((100% - 980px) / 2 + 46px));
-    padding-left: max(5.7%, calc((100% - 980px) / 2 + 64px));
+    padding: 62px 0 0;
+  }
+
+  .project-sections [data-section-id='approachable-interface'] .labeled-media {
+    width: min(100% - 40px, 870px);
+    margin-inline: auto;
   }
 
   .project-sections [data-section-id='approachable-interface'] .caption {
-    right: calc((100% - 980px) / 2 + 107px);
-    left: calc((100% - 980px) / 2 + 107px);
-    text-align: left;
+    right: auto;
+    left: 50%;
+    width: max-content;
+    max-width: calc(100% - 40px);
+    white-space: nowrap;
+    text-align: center;
+    transform: translateX(-50%);
   }
 
   .project-sections [data-section-id='safety-interface'] {
-    padding-right: max(5.7%, calc((100% - 980px) / 2 + 5px));
-    padding-left: max(5.7%, calc((100% - 980px) / 2 + 57px));
+    padding: 62px 0 0;
+  }
+
+  .project-sections [data-section-id='safety-interface'] .labeled-media {
+    width: min(100% - 40px, 918px);
+    margin-inline: auto;
   }
 
   .project-sections [data-section-id='safety-interface'] .caption {
     right: auto;
-    left: calc((100% - 980px) / 2 + 309px);
-    width: 430px;
-    text-align: left;
+    left: 50%;
+    width: max-content;
+    max-width: calc(100% - 40px);
+    white-space: nowrap;
+    text-align: center;
+    transform: translateX(-50%);
   }
 }
 
 .project-sections [data-section-id='food-scanner'] {
+  position: relative;
   width: 100%;
   max-width: none;
+  min-height: 560px;
   margin: 0;
-  padding: 22px 18px 68px;
-  color: #333;
-  background: #fff;
+  padding: 50px 4.5% 34px;
+  overflow: hidden;
+  color: #fff;
+  background: #f3a23e;
   text-align: center;
 }
 
 .project-sections [data-section-id='food-scanner'] .prose {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: none;
+  min-height: 476px;
 }
 
 .project-sections [data-section-id='food-scanner'] .text--heading,
 .project-sections [data-section-id='food-scanner'] .text--body {
   margin: 0;
-  font-family: helvetica-w01-bold, sans-serif;
-  font-size: 38px;
+  color: #fff;
+  font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
+  font-size: clamp(14px, 1.55vw, 30px);
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-sections [data-section-id='food-scanner']::before,
+.project-sections [data-section-id='food-scanner']::after {
+  position: absolute;
+  right: 4.5%;
+  left: 4.5%;
+  z-index: 1;
+  content: '';
+}
+
+.project-sections [data-section-id='food-scanner']::before {
+  top: 30%;
+  height: 47%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 30px,
+    #fff 30px 40px
+  );
+}
+
+.project-sections [data-section-id='food-scanner']::after {
+  top: 25%;
+  right: auto;
+  left: 5.5%;
+  width: min(16vw, 320px);
+  height: min(16vw, 320px);
+  background: #f5a63d;
+  border-radius: 50%;
+  box-shadow:
+    19.5vw 0 #f45120,
+    39vw 0 #9dbdca,
+    58.5vw 0 #c7c3d8,
+    78vw 0 #303d7d;
 }
 
 @media (max-width: 700px) {
@@ -645,6 +748,38 @@
   }
 
   .project-sections [data-section-id='food-scanner'] {
-    padding: 42px 22px 58px;
+    min-height: 390px;
+    padding: 30px 18px 26px;
+  }
+
+  .project-sections [data-section-id='food-scanner'] .prose {
+    min-height: 334px;
+  }
+
+  .project-sections [data-section-id='food-scanner'] .text--heading,
+  .project-sections [data-section-id='food-scanner'] .text--body {
+    font-size: clamp(11px, 3vw, 17px);
+  }
+
+  .project-sections [data-section-id='food-scanner']::before {
+    top: 31%;
+    height: 43%;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0 17px,
+      #fff 17px 23px
+    );
+  }
+
+  .project-sections [data-section-id='food-scanner']::after {
+    top: 34%;
+    left: 4%;
+    width: 16vw;
+    height: 16vw;
+    box-shadow:
+      19.8vw 0 #f45120,
+      39.6vw 0 #9dbdca,
+      59.4vw 0 #c7c3d8,
+      79.2vw 0 #303d7d;
   }
 }

@@ -24,11 +24,13 @@ export function PortfolioIndexPage() {
             App Design
           </LinkButton>
         </div>
-        <Media
-          media={featuredProject.cover}
-          fit="cover"
-          loading="eager"
-        />
+        <div className="latest-work__media">
+          <Media
+            media={featuredProject.cover}
+            fit="cover"
+            loading="eager"
+          />
+        </div>
       </section>
       <section className="welcome-panel" id="about">
         <h2>Welcome<br />to My<br />Portfolio</h2>

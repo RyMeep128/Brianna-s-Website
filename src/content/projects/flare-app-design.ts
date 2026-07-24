@@ -70,7 +70,7 @@ export const flareAppDesign: Project = {
       type: 'text',
       heading: 'We use color, gradients, and texture...',
       body: [
-        'to show complicated emotions associated with Autoimmune Conditions.',
+        'to show complected emotions associated with Autoimmune Conditions.',
       ],
       width: 'narrow',
       spacingBefore: 'xlarge',
