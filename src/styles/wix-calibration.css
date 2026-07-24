@@ -468,7 +468,7 @@
   .project-introduction__hero {
   position: relative;
   width: 100%;
-  min-height: clamp(420px, 50vw, 720px);
+  min-height: clamp(340px, 44vw, 520px);
   overflow: hidden;
   background: transparent;
 }
@@ -804,7 +804,7 @@
 @media (max-width: 700px) {
   .project-introduction[data-project-slug='flare-app-design']
     .project-introduction__hero {
-    min-height: 390px;
+    min-height: 330px;
   }
 
   .project-introduction[data-project-slug='flare-app-design']
