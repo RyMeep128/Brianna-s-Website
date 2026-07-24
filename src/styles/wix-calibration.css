@@ -442,6 +442,17 @@
   mix-blend-mode: screen;
 }
 
+.site-shell--flare .site-header nav a,
+.site-shell--flare .site-header .nav-preview {
+  color: #fff;
+}
+
+.site-shell--flare .site-header nav a:hover,
+.site-shell--flare .site-header nav a[aria-current='page'] {
+  color: #fff;
+  opacity: 0.72;
+}
+
 .site-shell--flare .project-sections .labeled-media,
 .site-shell--flare .project-sections .media {
   background: transparent;
@@ -523,7 +534,7 @@
 
 .flare-hero__community {
   right: 8%;
-  bottom: 26%;
+  bottom: 9%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(11px, 1.35vw, 20px);
@@ -667,7 +678,7 @@
   .project-sections [data-section-id='welcome-to-flare'] {
     position: relative;
     display: block;
-    height: 680px;
+    height: 620px;
   }
 
   .project-sections [data-section-id='welcome-to-flare'] .labeled-media {
@@ -694,7 +705,7 @@
   }
 
   .project-sections [data-section-id='approachable-interface'] {
-    padding: 62px 0 0;
+    padding: 40px 0 0;
   }
 
   .project-sections [data-section-id='approachable-interface'] .labeled-media {
@@ -713,7 +724,7 @@
   }
 
   .project-sections [data-section-id='safety-interface'] {
-    padding: 62px 0 0;
+    padding: 40px 0 0;
   }
 
   .project-sections [data-section-id='safety-interface'] .labeled-media {
@@ -738,9 +749,9 @@
   position: relative;
   width: 100%;
   max-width: none;
-  min-height: 560px;
+  min-height: 530px;
   margin: 0;
-  padding: 50px 4.5% 34px;
+  padding: 38px 4.5% 30px;
   overflow: hidden;
   color: #fff;
   background: transparent;
@@ -754,7 +765,7 @@
   flex-direction: column;
   justify-content: space-between;
   max-width: none;
-  min-height: 476px;
+  min-height: 462px;
 }
 
 .project-sections [data-section-id='food-scanner'] .text--heading,
@@ -891,7 +902,7 @@
 
   .flare-hero__community {
     right: 5%;
-    bottom: 24%;
+    bottom: 8%;
     left: 5%;
   }
 
@@ -909,7 +920,7 @@
 
   .project-sections [data-section-id='welcome-to-flare'] .prose {
     max-width: none;
-    padding: 42px 24px 46px;
+    padding: 32px 24px 36px;
   }
 
   .project-sections [data-section-id='welcome-to-flare'] .text--heading,
@@ -938,12 +949,12 @@
   .project-sections [data-section-id='food-scanner'] {
     --palette-center: 52.5%;
     --palette-circle-size: 16vw;
-    min-height: 390px;
-    padding: 30px 18px 26px;
+    min-height: 370px;
+    padding: 24px 18px 22px;
   }
 
   .project-sections [data-section-id='food-scanner'] .prose {
-    min-height: 334px;
+    min-height: 324px;
   }
 
   .project-sections [data-section-id='food-scanner'] .text--heading,
