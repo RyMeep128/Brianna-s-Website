@@ -534,7 +534,7 @@
 
 .flare-hero__community {
   right: 8%;
-  bottom: 13%;
+  bottom: 20%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(11px, 1.35vw, 20px);
@@ -906,7 +906,7 @@
 
   .flare-hero__community {
     right: 5%;
-    bottom: 13%;
+    bottom: 20%;
     left: 5%;
   }
 
