@@ -394,7 +394,14 @@
 .project-introduction[data-project-slug='flare-app-design'] {
   width: 100%;
   max-width: none;
-  background: #f15a24;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #f7a13a 0%,
+    #f78b2f 38%,
+    #f66b25 70%,
+    #f4511e 100%
+  );
   border: 0;
 }
 
@@ -406,6 +413,8 @@
 .project-introduction[data-project-slug='flare-app-design']
   .project-introduction__hero {
   width: 100%;
+  overflow: hidden;
+  background: inherit;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
@@ -415,11 +424,50 @@
   width: 100%;
   height: auto;
   object-fit: contain !important;
+  mix-blend-mode: lighten;
+  transform-origin: 50% 100%;
+  animation: flare-hop 4.6s cubic-bezier(0.22, 0.78, 0.34, 1) infinite;
 }
 
 .project-introduction[data-project-slug='flare-app-design']
   .project-introduction__details {
   display: none;
+}
+
+@keyframes flare-hop {
+  0%,
+  58%,
+  100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+
+  62% {
+    transform: translateY(0) scaleX(1.025) scaleY(0.975);
+  }
+
+  68% {
+    transform: translateY(-5.5%) scaleX(0.985) scaleY(1.015);
+  }
+
+  74% {
+    transform: translateY(0) scaleX(1.035) scaleY(0.965);
+  }
+
+  79% {
+    transform: translateY(-1.4%) scaleX(0.995) scaleY(1.005);
+  }
+
+  84% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-introduction[data-project-slug='flare-app-design']
+    .project-introduction__hero
+    .media {
+    animation: none;
+  }
 }
 
 .project-sections [data-section-id='welcome-to-flare'] {
