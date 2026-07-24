@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { LinkButton } from '../components/atoms/LinkButton'
 import { Media } from '../components/atoms/Media'
 import { projects } from '../content/projects'
@@ -24,13 +25,17 @@ export function HomePage() {
             App Design
           </LinkButton>
         </div>
-        <div className="latest-work__media">
+        <Link
+          className="latest-work__media"
+          to={`/projects/${featuredProject.slug}`}
+          aria-label={`View ${featuredProject.title}`}
+        >
           <Media
             media={featuredProject.cover}
             fit="cover"
             loading="eager"
           />
-        </div>
+        </Link>
       </section>
       <section className="welcome-panel" id="about">
         <h2>Welcome<br />to My<br />Portfolio</h2>

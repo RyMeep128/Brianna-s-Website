@@ -16,6 +16,9 @@ describe('portfolio routes', () => {
     expect(
       screen.getByRole('link', { name: 'App Design' }),
     ).toHaveAttribute('href', '/projects/flare-app-design')
+    expect(
+      screen.getByRole('link', { name: 'View Flare App Design' }),
+    ).toHaveAttribute('href', '/projects/flare-app-design')
   })
 
   it('renders project sections in their declared order', () => {
