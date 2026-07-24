@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
-
 :root {
   color-scheme: light;
-  --color-paper: #f4f1e9;
-  --color-ink: #171714;
-  --color-mist: #e7e4db;
-  --color-accent: #d96f4c;
-  --color-cobalt: #294fc4;
-  --color-ochre: #c99a32;
-  --color-line: rgba(23, 23, 20, 0.22);
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body: 'DM Sans', Arial, sans-serif;
+  --color-paper: #ffffff;
+  --color-ink: #333333;
+  --color-mist: #f5f5f3;
+  --color-accent: #ed803f;
+  --color-cobalt: #0068d9;
+  --color-ochre: #f49a3d;
+  --color-line: rgba(51, 51, 51, 0.2);
+  --font-display: Helvetica, Arial, sans-serif;
+  --font-body: Helvetica, Arial, sans-serif;
   --space-1: 0.375rem;
   --space-2: 0.75rem;
   --space-3: 1.25rem;
@@ -690,5 +688,292 @@ img {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Brianna's current portfolio direction */
+.site-header {
+  display: grid;
+  min-height: 22rem;
+  padding: var(--space-5) var(--page-gutter) var(--space-4);
+  border: 0;
+  background: #fff;
+  justify-items: center;
+}
+
+.wordmark {
+  position: relative;
+  display: inline-grid;
+  min-width: 18rem;
+  color: #050505;
+  text-align: center;
+}
+
+.wordmark span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(3.4rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.1em;
+}
+
+.wordmark em {
+  justify-self: end;
+  margin-right: 1.25rem;
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1;
+  transform: rotate(-5deg);
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.site-header nav a,
+.nav-preview {
+  padding-block: var(--space-2);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current='page'] {
+  color: #0068d9;
+  border: 0;
+}
+
+.nav-preview {
+  color: #777;
+  cursor: default;
+}
+
+.latest-work {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1fr) minmax(0, 1.25fr);
+  min-height: 32rem;
+  border-bottom: 0.35rem solid #fff;
+}
+
+.latest-work__copy {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: clamp(3rem, 8vw, 8rem);
+}
+
+.latest-work__copy > p:not(.text--eyebrow) {
+  max-width: 27rem;
+  margin: 0 0 var(--space-5);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  line-height: 1.35;
+}
+
+.latest-work__copy .text--eyebrow {
+  margin-bottom: var(--space-2);
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+.latest-work > .media {
+  min-height: 32rem;
+}
+
+.welcome-panel {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-6);
+  align-items: center;
+  min-height: 32rem;
+  padding: clamp(3rem, 7vw, 7rem) var(--page-gutter);
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.welcome-panel h2 {
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.welcome-panel > div {
+  max-width: 30rem;
+}
+
+.welcome-panel p {
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  line-height: 1.5;
+}
+
+.welcome-panel a {
+  display: inline-block;
+  margin-top: var(--space-2);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.link-button--filled {
+  min-width: 15.5rem;
+  min-height: 4.4rem;
+  padding: var(--space-2) var(--space-4);
+  color: #fff;
+  background: var(--color-accent);
+  border: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+}
+
+.project-introduction {
+  padding: 0;
+  color: #fff;
+  background: #f15a24;
+  border-bottom: 0.65rem solid #fff;
+}
+
+.project-introduction__hero {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: min(62rem, 82vh);
+  padding: var(--space-6) var(--page-gutter);
+  text-align: center;
+}
+
+.project-introduction__hero .text--display {
+  max-width: 12ch;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.project-introduction__hero .text--eyebrow:first-child {
+  margin-bottom: var(--space-3);
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.project-introduction__hero .text--eyebrow:last-child {
+  margin: var(--space-5) 0 0;
+  font-size: clamp(0.85rem, 2vw, 1.35rem);
+}
+
+.project-introduction__details {
+  margin-top: 0;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.project-introduction__details .text--heading {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.project-introduction__metadata dt {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.background--accent {
+  color: #fff;
+  background: #f15a24;
+}
+
+.media--empty {
+  background: #fff;
+  border: 1px solid rgba(51, 51, 51, 0.12);
+}
+
+.media--orange {
+  background: linear-gradient(155deg, #f49a3d 0%, #f15a24 72%);
+  border-color: transparent;
+}
+
+.media--cream {
+  background: #fff5ea;
+}
+
+.media--white {
+  background: #fff;
+}
+
+.site-footer {
+  padding: var(--space-6) var(--page-gutter) var(--space-5);
+  border-top: var(--border-thin);
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.site-footer p {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+}
+
+@media (max-width: 48rem) {
+  .site-header {
+    min-height: 18rem;
+  }
+
+  .site-header nav {
+    gap: 0.6rem 1.4rem;
+  }
+
+  .nav-preview {
+    display: none;
+  }
+
+  .latest-work,
+  .welcome-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .latest-work__copy {
+    min-height: 28rem;
+    padding: var(--space-6) var(--page-gutter);
+  }
+
+  .latest-work > .media {
+    min-height: 24rem;
+  }
+
+  .welcome-panel {
+    gap: var(--space-4);
+  }
+
+  .project-introduction__details {
+    margin-top: 0;
+    padding-top: var(--space-5);
+  }
+}
+
+@media (max-width: 32rem) {
+  .site-header {
+    min-height: 15rem;
+  }
+
+  .wordmark {
+    min-width: 14rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.9rem;
+  }
+
+  .welcome-panel h2 {
+    font-size: clamp(3.5rem, 20vw, 5.5rem);
   }
 }

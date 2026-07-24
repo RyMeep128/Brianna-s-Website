@@ -5,14 +5,19 @@ import { ProjectMetadata } from '../molecules/ProjectMetadata'
 
 export function ProjectIntroduction({ project }: { project: Project }) {
   return (
-    <header className="project-introduction content-width content-width--wide">
+    <header className="project-introduction">
       {project.fictional && <p className="sample-flag">Fictional example</p>}
-      <Text as="h1" variant="display">
-        {project.title}
-      </Text>
-      <div className="project-introduction__details">
-        <Text variant="heading">{project.summary}</Text>
+      <div className="project-introduction__hero">
+        <Text variant="eyebrow">Hello!</Text>
+        <Text as="h1" variant="display">We are Flare</Text>
+        <Text as="p" variant="eyebrow">An autoimmune support community</Text>
+      </div>
+      <div className="project-introduction__details content-width content-width--wide">
         <div>
+          <Text variant="eyebrow">{project.title}</Text>
+          <Text variant="heading">{project.summary}</Text>
+        </div>
+        <div className="project-introduction__metadata">
           <ProjectMetadata
             year={project.year}
             disciplines={project.disciplines}

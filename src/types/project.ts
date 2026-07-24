@@ -9,7 +9,7 @@ export interface MediaAsset {
   src?: string
   alt: string
   caption?: string
-  placeholder?: 'ochre' | 'cobalt' | 'coral' | 'charcoal' | 'paper'
+  placeholder?: 'orange' | 'cream' | 'white'
   aspectRatio?: 'square' | 'portrait' | 'landscape' | 'wide'
 }
 

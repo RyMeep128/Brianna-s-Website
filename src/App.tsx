@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { SiteHeader } from './components/organisms/SiteHeader'
+import { SiteFooter } from './components/organisms/SiteFooter'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PortfolioIndexPage } from './pages/PortfolioIndexPage'
 import { ProjectPage } from './pages/ProjectPage'
@@ -16,6 +17,7 @@ export function App() {
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <SiteFooter />
     </>
   )
 }

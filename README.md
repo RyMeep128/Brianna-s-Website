@@ -42,5 +42,6 @@ npm run build
 - `src/types/project.ts` — layout recipe contract
 - `public/assets/projects` — project artwork, grouped by slug
 
-`Material Studies No. 01` is fictional and can be deleted after real projects
-are added.
+`Flare App Design` currently uses intentionally blank media slots. Add
+Brianna's real files under `public/assets/projects/flare-app-design/` and
+reference those file names in its project definition when they are ready.

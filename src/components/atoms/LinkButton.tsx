@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 interface LinkButtonProps {
   to: string
   children: ReactNode
-  variant?: 'text' | 'outlined'
+  variant?: 'text' | 'outlined' | 'filled'
 }
 
 export function LinkButton({

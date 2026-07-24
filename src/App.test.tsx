@@ -14,13 +14,13 @@ describe('portfolio routes', () => {
     )
 
     expect(
-      screen.getByRole('link', { name: /material studies no\. 01/i }),
-    ).toHaveAttribute('href', '/projects/material-studies')
+      screen.getByRole('link', { name: 'App Design' }),
+    ).toHaveAttribute('href', '/projects/flare-app-design')
   })
 
   it('renders project sections in their declared order', () => {
     const { container } = render(
-      <MemoryRouter initialEntries={['/projects/material-studies']}>
+      <MemoryRouter initialEntries={['/projects/flare-app-design']}>
         <App />
       </MemoryRouter>,
     )
@@ -28,17 +28,15 @@ describe('portfolio routes', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /material studies/i,
+        name: /we are flare/i,
       }),
     ).toBeVisible()
     const sectionIds = [
-      'opening-statement',
-      'hero-artwork',
-      'editorial-spread',
-      'quiet-pause',
-      'paired-details',
-      'process',
-      'closing-image',
+      'welcome-to-flare',
+      'community-screen',
+      'interface-details',
+      'visual-language',
+      'food-scanner',
     ]
     const renderedIds = Array.from(
       container.querySelectorAll('.project-sections > *'),

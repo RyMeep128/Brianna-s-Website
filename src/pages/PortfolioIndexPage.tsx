@@ -1,26 +1,47 @@
-import { ProjectCard } from '../components/organisms/ProjectCard'
+import { LinkButton } from '../components/atoms/LinkButton'
+import { Media } from '../components/atoms/Media'
 import { projects } from '../content/projects'
 
 export function PortfolioIndexPage() {
+  const featuredProject = projects[0]
+
   return (
-    <main id="main-content" className="portfolio-index">
-      <header className="portfolio-index__intro">
-        <p className="text text--eyebrow">Portfolio foundation</p>
-        <h1 className="portfolio-index__title">
-          Art, design, and close attention.
-        </h1>
-        <p className="portfolio-index__note">
-          A flexible home for Brianna’s work. This first project is a fictional
-          example of the layout system.
-        </p>
-      </header>
-      <section className="project-list" aria-labelledby="selected-work">
-        <h2 className="visually-hidden" id="selected-work">
-          Selected work
-        </h2>
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
+    <main id="main-content" className="home-page">
+      <section className="latest-work" aria-labelledby="latest-work-title">
+        <div className="latest-work__copy">
+          <p className="text text--eyebrow">Latest Work</p>
+          <h1 className="visually-hidden" id="latest-work-title">
+            {featuredProject.title}
+          </h1>
+          <p>
+            An app dedicated to practically supporting individuals with
+            autoimmune conditions, mentally, socially, and physically.
+          </p>
+          <LinkButton
+            to={`/projects/${featuredProject.slug}`}
+            variant="filled"
+          >
+            App Design
+          </LinkButton>
+        </div>
+        <Media
+          media={{
+            alt: 'Flare App Design cover artwork to be added',
+            placeholder: 'orange',
+            aspectRatio: 'landscape',
+          }}
+        />
+      </section>
+      <section className="welcome-panel" id="about">
+        <h2>Welcome<br />to My<br />Portfolio</h2>
+        <div>
+          <p>
+            I am Brianna, a Graphic Designer and Studio Artist. As you explore
+            my work, you&apos;ll see the dedication and creativity I pour into
+            each project.
+          </p>
+          <a href="#footer">Read More</a>
+        </div>
       </section>
     </main>
   )

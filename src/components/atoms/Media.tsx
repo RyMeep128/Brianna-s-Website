@@ -11,7 +11,7 @@ export function Media({ media, fit = 'cover', loading = 'lazy' }: MediaProps) {
   const classes = [
     'media',
     `media--${media.aspectRatio ?? 'landscape'}`,
-    !media.src && `media--placeholder media--${media.placeholder ?? 'paper'}`,
+    !media.src && `media--empty media--${media.placeholder ?? 'white'}`,
   ]
     .filter(Boolean)
     .join(' ')
@@ -33,9 +33,7 @@ export function Media({ media, fit = 'cover', loading = 'lazy' }: MediaProps) {
       className={classes}
       role="img"
       aria-label={media.alt}
-      data-placeholder-label="Sample artwork"
-    >
-      <span aria-hidden="true">Sample artwork</span>
-    </div>
+      data-empty-asset
+    />
   )
 }

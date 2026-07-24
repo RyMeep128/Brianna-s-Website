@@ -1,11 +1,11 @@
 import type { Project } from '../../types/project'
-import { materialStudies } from './material-studies'
+import { flareAppDesign } from './flare-app-design'
 
 /**
  * Register every project here. Its array position controls the portfolio order
  * and next-project navigation.
  */
-export const projects = [materialStudies] satisfies Project[]
+export const projects = [flareAppDesign] satisfies Project[]
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug)
