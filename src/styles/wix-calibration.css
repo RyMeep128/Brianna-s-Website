@@ -443,10 +443,6 @@
   background: transparent;
 }
 
-.site-shell--flare .project-sections .media {
-  mix-blend-mode: multiply;
-}
-
 .site-shell--flare .project-navigation a {
   color: #fff;
 }
