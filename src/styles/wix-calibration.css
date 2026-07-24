@@ -478,7 +478,7 @@
   .media {
   display: block;
   position: absolute;
-  top: 8%;
+  top: 3%;
   left: 27%;
   z-index: 1;
   width: 46%;
@@ -512,7 +512,7 @@
 }
 
 .flare-hero__we-are {
-  top: 28%;
+  top: 24%;
   left: 32%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(28px, 3vw, 52px);
@@ -523,7 +523,7 @@
 
 .flare-hero__community {
   right: 8%;
-  bottom: 22%;
+  bottom: 26%;
   left: 8%;
   font-family: lulo-clean-w01-one-bold, Arial Black, sans-serif;
   font-size: clamp(11px, 1.35vw, 20px);
@@ -810,7 +810,7 @@
   .project-introduction[data-project-slug='flare-app-design']
     .project-introduction__hero
     .media {
-    top: 8%;
+    top: 4%;
     left: 4%;
     width: 92%;
     height: 78%;
@@ -822,13 +822,13 @@
   }
 
   .flare-hero__we-are {
-    top: 22%;
+    top: 19%;
     left: 8%;
   }
 
   .flare-hero__community {
     right: 5%;
-    bottom: 18%;
+    bottom: 24%;
     left: 5%;
   }
 
